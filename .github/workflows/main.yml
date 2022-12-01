@@ -23,8 +23,7 @@ jobs:
       - name: serverless deploy
         uses: serverless/github-action@master
         with:
-          args: deploy --config ./lambda-selenium-java/serverless.yml
-          run: mv ./lambda-selenium-java/serverless.yml ./serverless.yml
+          args:  -c "cd ./lambda-selenium-java && serverless deploy"
         env:
           # SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
           # or if using AWS credentials directly
