@@ -8,4 +8,9 @@ public class MockLambdaConsoleLogger implements LambdaLogger {
     public void log(String string) {
         System.out.println(string);
     }
+
+    @Override
+    public void log(byte[] message) {
+
+    }
 }
