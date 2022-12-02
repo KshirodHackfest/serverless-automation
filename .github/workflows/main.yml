@@ -24,7 +24,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
       - name: Run build with Gradle Wrapper
-        run: ./lambda-selenium-java/gradlew build
+        run: bash ./lambda-selenium-java/gradlew build
 
       - name: Serverless preparation
         run: |
