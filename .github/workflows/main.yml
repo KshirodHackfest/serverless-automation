@@ -25,6 +25,7 @@ jobs:
           # --config wants the serverless files in the root, so I move them there
           echo move configuration file to the root folder
           mv ./lambda-selenium-java/* .
+          gradle clean unzipLibs shadowJar
       - name: serverless deploy
         uses: serverless/github-action@master
         with:
