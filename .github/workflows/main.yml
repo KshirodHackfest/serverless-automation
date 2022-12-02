@@ -24,7 +24,7 @@ jobs:
         run: |
           # --config wants the serverless files in the root, so I move them there
           echo move configuration file to the root folder
-          mv ./lambda-selenium-java .
+          mv ./lambda-selenium-java/* .
       - name: serverless deploy
         uses: serverless/github-action@master
         with:
